@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="UsLoginContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserLoginController">
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="642.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Photos/Pic%203.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="239.0" layoutY="45.0" prefHeight="40.0" prefWidth="81.0" text="login" textFill="#ff0606">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="173.0" layoutY="84.0" prefWidth="200.0" />
+      <Label layoutX="65.0" layoutY="142.0" text="User Name" textAlignment="CENTER" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="252.0" text="Password" textAlignment="CENTER" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsUserName" layoutX="193.0" layoutY="140.0" />
+      <PasswordField fx:id="pwdUsPassword" layoutX="193.0" layoutY="250.0" />
+      <Button fx:id="btnUsLogin" layoutX="241.0" layoutY="324.0" mnemonicParsing="false" onAction="#UsLoginOnAction" text="Login" textAlignment="CENTER" textFill="#171717" />
+   </children>
+</AnchorPane>

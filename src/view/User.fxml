@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="906.0" prefWidth="1268.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="904.0" prefWidth="208.0" style="-fx-background-color: #16a085;">
+         <children>
+            <Button fx:id="btnI_Management" layoutX="27.0" layoutY="43.0" mnemonicParsing="false" onAction="#I_ManagementOnAction" text="ItemManagement" />
+            <Button fx:id="Cus_Management" layoutX="22.0" layoutY="331.0" mnemonicParsing="false" onAction="#Cus_ManagementOnAction" text="CustomerManagement" />
+            <Button fx:id="btnOrderManagement" layoutX="29.0" layoutY="169.0" mnemonicParsing="false" onAction="#OrderManagementOnAction" text="Order Management" />
+            <Button fx:id="btnDeliveryManagement" layoutX="23.0" layoutY="470.0" mnemonicParsing="false" onAction="#DeliveryManagementOnAction" text="Delivery  Management" />
+            <Button fx:id="btnVehicle" layoutX="27.0" layoutY="615.0" mnemonicParsing="false" onAction="#VehicleManagementOnAction" text="Vehicle Management" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="UserContext" layoutX="213.0" layoutY="6.0" prefHeight="895.0" prefWidth="1049.0" style="-fx-background-color: #95a5a6;  -fx-border-color: red;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdminContext" prefHeight="895.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrderDetailsController">
+   <children>
+      <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="425.0" layoutY="107.0" onKeyReleased="#EnterKeyRelease" promptText="Jack" />
+      <TextField fx:id="txtSearch" layoutX="102.0" layoutY="348.0" onAction="#txtSearchCustomer" prefHeight="31.0" prefWidth="566.0" promptText="Search" />
+      <Label layoutX="61.0" layoutY="36.0" text="Order Details Form" textFill="#060a6b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="57.0" layoutY="56.0" prefHeight="13.0" prefWidth="994.0" />
+      <JFXTextField fx:id="txtDate" labelFloat="true" layoutX="868.0" layoutY="100.0" onKeyReleased="#EnterKeyRelease" promptText="952323777V" />
+      <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="651.0" layoutY="107.0" onKeyReleased="#EnterKeyRelease" promptText="Colombo" />
+      <JFXTextField fx:id="txtTime" labelFloat="true" layoutX="44.0" layoutY="213.0" onKeyReleased="#EnterKeyRelease" promptText="077-1212713" />
+      <JFXButton fx:id="btnOrderDetails" buttonType="RAISED" layoutX="883.0" layoutY="348.0" onAction="#SaveOrderDetailsOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Save Order Details" textFill="WHITE" />
+      <JFXButton fx:id="btnNewCus" buttonType="RAISED" layoutX="910.0" layoutY="25.0" onAction="#NewCustomerOnAction" ripplerFill="WHITE" style="-fx-background-color: FF5F30;" text="+New" textFill="WHITE" />
+      <Label layoutX="213.0" layoutY="152.0" prefHeight="17.0" prefWidth="135.0" text="itemCode " />
+      <Label layoutX="429.0" layoutY="142.0" prefHeight="17.0" prefWidth="135.0" text="qty " />
+      <Label layoutX="873.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="date" />
+      <Label layoutX="660.0" layoutY="142.0" prefHeight="17.0" prefWidth="135.0" text="qtyOnHand" />
+      <Label layoutX="35.0" layoutY="256.0" prefHeight="17.0" prefWidth="135.0" text="time" />
+      <TableView fx:id="tblOrderDetails" layoutX="37.0" layoutY="437.0" prefHeight="200.0" prefWidth="783.0">
+         <columns>
+            <TableColumn fx:id="colOid" prefWidth="105.0" text="Order Id" />
+            <TableColumn fx:id="colI_code" prefWidth="105.0" text="itemCode " />
+            <TableColumn fx:id="colQty" prefWidth="107.0" text="qty " />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="176.0" text="qtyOnHand" />
+            <TableColumn fx:id="colDate" prefWidth="157.0" text="date" />
+            <TableColumn fx:id="colTime" prefWidth="165.0" text="time" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="687.0" layoutY="348.0" onAction="#SearchOrderDetailsOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Search Order Details" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="833.0" layoutY="432.0" onAction="#DeleteOrderDetailsOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Delete Order Details" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="840.0" layoutY="506.0" onAction="#UpdateOrderDetailsOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Update Order Details" textFill="WHITE" />
+      <JFXTextField fx:id="txtI_code" labelFloat="true" layoutX="213.0" layoutY="107.0" onKeyReleased="#EnterKeyRelease" promptText="C00-000" />
+      <JFXTextField fx:id="txtOid" labelFloat="true" layoutX="44.0" layoutY="107.0" onKeyReleased="#EnterKeyRelease" promptText="000-000" />
+      <Label layoutX="44.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="Order Id" />
+   </children>
+</AnchorPane>

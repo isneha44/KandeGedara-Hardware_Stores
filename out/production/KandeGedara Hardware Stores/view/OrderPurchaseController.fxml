@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdminContext" prefHeight="895.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.OrderPurchaseController">
+   <children>
+      <Button fx:id="btnSave" layoutX="586.0" layoutY="381.0" mnemonicParsing="false" onAction="#SaveOnAction" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #3CC798;" text="Save" />
+      <TextField fx:id="txtSearch" layoutX="217.0" layoutY="381.0" prefHeight="25.0" prefWidth="345.0" />
+      <TableView fx:id="tblView" layoutX="38.0" layoutY="439.0" prefHeight="306.0" prefWidth="924.0">
+         <columns>
+            <TableColumn fx:id="colOderId" prefWidth="104.0" text="Order Id" />
+            <TableColumn fx:id="colItemCode" prefWidth="175.0" text="ItemCode" />
+            <TableColumn fx:id="colName" prefWidth="102.0" text="Item Name" />
+            <TableColumn fx:id="colUnit" prefWidth="115.0" text="Unit Price" />
+            <TableColumn fx:id="colqty" prefWidth="119.0" text="qty" />
+            <TableColumn fx:id="colDate" prefWidth="102.0" text="Date" />
+            <TableColumn fx:id="colTime1" prefWidth="102.0" text="Time" />
+            <TableColumn fx:id="colTime11" prefWidth="102.0" text="Total" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblDate" layoutX="789.0" layoutY="40.0" prefHeight="33.0" prefWidth="130.0" textFill="#bf5656" />
+      <Label fx:id="lblTime" layoutX="787.0" layoutY="80.0" prefHeight="33.0" prefWidth="130.0" />
+      <TextField fx:id="txtOrderId" layoutX="16.0" layoutY="178.0" onKeyReleased="#OrderIdKeyRelseed" prefHeight="25.0" prefWidth="83.0" promptText="O00-001" />
+      <TextField fx:id="txtItemId" layoutX="124.0" layoutY="178.0" onKeyReleased="#ItemIdKeyRelseed" prefHeight="25.0" prefWidth="101.0" promptText="I00-001" />
+      <TextField fx:id="txtQty" layoutX="620.0" layoutY="178.0" prefHeight="31.0" prefWidth="101.0" promptText="qty 1" />
+      <TextField fx:id="txtDate12" layoutX="738.0" layoutY="178.0" prefHeight="31.0" prefWidth="130.0" promptText="Date" />
+      <TextField fx:id="txtTime" layoutX="880.0" layoutY="178.0" prefHeight="31.0" prefWidth="130.0" promptText="08:00:00" />
+      <Label layoutX="929.0" layoutY="129.0" text="Time" />
+      <Label layoutX="771.0" layoutY="129.0" text="Date" />
+      <Label layoutX="480.0" layoutY="129.0" text="Unit Price" />
+      <Label layoutX="645.0" layoutY="129.0" text="qty" />
+      <Label layoutX="130.0" layoutY="129.0" text="Item Code" />
+      <Label layoutX="30.0" layoutY="129.0" text="Order Id" />
+      <TextField fx:id="txtName" layoutX="258.0" layoutY="178.0" prefHeight="31.0" prefWidth="166.0" promptText="Name" />
+      <TextField fx:id="txtPrice" layoutX="451.0" layoutY="178.0" prefHeight="31.0" prefWidth="148.0" promptText="Unit Price" />
+      <Button fx:id="btnO_Purchase" layoutX="38.0" layoutY="381.0" mnemonicParsing="false" onAction="#PurchaseOnAction" style="-fx-background-color: #3CC798;" text="O_Purchase Add" />
+      <Separator layoutX="16.0" layoutY="857.0" prefHeight="0.0" prefWidth="201.0" />
+      <Separator layoutX="13.0" layoutY="772.0" orientation="VERTICAL" prefHeight="86.0" prefWidth="1.0" />
+      <Label layoutX="36.0" layoutY="795.0" prefHeight="40.0" prefWidth="101.0" text="Total=">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="122.0" layoutY="795.0" prefHeight="40.0" prefWidth="12.0" text="0" textFill="#a40000">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="214.0" layoutY="774.0" orientation="VERTICAL" prefHeight="86.0" prefWidth="1.0" />
+      <Separator layoutX="16.0" layoutY="771.0" prefHeight="0.0" prefWidth="201.0" />
+      <Label layoutX="304.0" layoutY="129.0" text="Item Name" />
+      <Label layoutX="25.0" layoutY="19.0" text="Order Purchase Form" textFill="#060a6b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="7.0" layoutY="57.0" prefHeight="13.0" prefWidth="1036.0" />
+      <JFXButton fx:id="btnNewCus" buttonType="RAISED" layoutX="915.0" layoutY="14.0" onAction="#NewCustomerOnAction" ripplerFill="WHITE" style="-fx-background-color: FF5F30;" text="+New" textFill="WHITE" />
+      <Button layoutX="744.0" layoutY="381.0" mnemonicParsing="false" onAction="#AddOrderOnAction" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #3CC798;" text="Add Order" />
+      <Button layoutX="870.0" layoutY="381.0" mnemonicParsing="false" onAction="#AddItemOnAction" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #3CC798;" text="Add Item" />
+      <TextField fx:id="txtTotal" layoutX="19.0" layoutY="249.0" prefHeight="25.0" prefWidth="92.0" promptText="Total" />
+   </children>
+</AnchorPane>

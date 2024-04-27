@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdminContext" prefHeight="895.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DeliveryFormController">
+   <children>
+      <JFXTextField fx:id="txtdId" labelFloat="true" layoutX="31.0" layoutY="106.0" promptText="D00-000" />
+      <JFXTextField fx:id="txtveNo" labelFloat="true" layoutX="234.0" layoutY="106.0" promptText="SP-4568" />
+      <TextField fx:id="txtSearch" layoutX="65.0" layoutY="317.0" onAction="#txtSearchDelivery" prefHeight="31.0" prefWidth="604.0" promptText="Search" />
+      <Label layoutX="61.0" layoutY="36.0" text="Delivery Form" textFill="#060a6b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="57.0" layoutY="56.0" prefHeight="13.0" prefWidth="994.0" />
+      <JFXTextField fx:id="txtcontact" labelFloat="true" layoutX="611.0" layoutY="106.0" promptText="077-1212346" />
+      <JFXTextField fx:id="txtaddress" labelFloat="true" layoutX="428.0" layoutY="107.0" promptText="Colombo" />
+      <JFXTextField fx:id="txtdeliveyFree" labelFloat="true" layoutX="842.0" layoutY="107.0" promptText="250.00" />
+      <JFXButton fx:id="btnSaveDelivery" buttonType="RAISED" layoutX="910.0" layoutY="317.0" onAction="#SaveDeliveryOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Save Delivery" textFill="WHITE" />
+      <JFXButton fx:id="btnNewDelivery" buttonType="RAISED" layoutX="910.0" layoutY="25.0" onAction="#NewDeliveryOnAction" ripplerFill="WHITE" style="-fx-background-color: FF5F30;" text="+New" textFill="WHITE" />
+      <Label layoutX="31.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="dId" />
+      <Label layoutX="234.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="veNo" />
+      <Label layoutX="611.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="contact" />
+      <Label layoutX="428.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="address" />
+      <Label layoutX="843.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="deliveyFree" />
+      <TableView fx:id="tblDelivery" layoutX="31.0" layoutY="432.0" prefHeight="200.0" prefWidth="862.0">
+         <columns>
+            <TableColumn fx:id="coldId" prefWidth="105.0" text="dId" />
+            <TableColumn fx:id="colveNo" prefWidth="107.0" text="veNo" />
+            <TableColumn fx:id="coladdress" prefWidth="176.0" text="address" />
+            <TableColumn fx:id="colcontact" prefWidth="157.0" text="contact" />
+            <TableColumn fx:id="coldelifee" prefWidth="165.0" text="deliveyFree" />
+            <TableColumn fx:id="coldate" prefWidth="165.0" text="date" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtdate" labelFloat="true" layoutX="40.0" layoutY="187.0" promptText="2022-09-03 14:45:00" />
+      <Label layoutX="43.0" layoutY="225.0" prefHeight="17.0" prefWidth="135.0" text="date" />
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="726.0" layoutY="317.0" onAction="#SearchDeliveryOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Search Delivery" textFill="WHITE" />
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="918.0" layoutY="440.0" onAction="#DeleteDeliveryOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Delete Delivery" textFill="WHITE" />
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="925.0" layoutY="501.0" onAction="#UpdateDeliveryOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="UpdateDelivery" textFill="WHITE" />
+   </children>
+</AnchorPane>

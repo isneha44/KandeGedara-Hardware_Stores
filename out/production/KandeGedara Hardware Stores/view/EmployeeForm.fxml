@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdminContext" prefHeight="895.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EmployeeFormController">
+   <children>
+      <JFXTextField fx:id="txtEmId" labelFloat="true" layoutX="31.0" layoutY="106.0" onKeyReleased="#EnterKeyRelease" promptText="E00-000" />
+      <JFXTextField fx:id="txtEmName" labelFloat="true" layoutX="234.0" layoutY="106.0" onKeyReleased="#EnterKeyRelease" promptText="Jack" />
+      <TextField fx:id="txtEmSearch" layoutX="57.0" layoutY="366.0" prefHeight="31.0" prefWidth="603.0" promptText="Search" />
+      <Label layoutX="61.0" layoutY="36.0" text="Employee Form" textFill="#060a6b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="57.0" layoutY="56.0" prefHeight="13.0" prefWidth="994.0" />
+      <JFXTextField fx:id="txtDesi" labelFloat="true" layoutX="611.0" layoutY="106.0" onKeyReleased="#EnterKeyRelease" promptText="Cashier" />
+      <JFXTextField fx:id="txtEmAddr" labelFloat="true" layoutX="428.0" layoutY="107.0" onKeyReleased="#EnterKeyRelease" promptText="Colombo" />
+      <JFXTextField fx:id="txtEmDob" labelFloat="true" layoutX="809.0" layoutY="106.0" onKeyReleased="#EnterKeyRelease" promptText="2000-10-24" />
+      <JFXButton fx:id="btnSaveEm" buttonType="RAISED" layoutX="636.0" layoutY="218.0" onAction="#SaveEmOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Save Employee" textFill="WHITE" />
+      <JFXButton fx:id="btnNewCus" buttonType="RAISED" layoutX="910.0" layoutY="25.0" onAction="#NewCustomerOnAction" ripplerFill="WHITE" style="-fx-background-color: FF5F30;" text="+New" textFill="WHITE" />
+      <Label layoutX="31.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="Id" />
+      <Label layoutX="234.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="Name" />
+      <Label layoutX="611.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="Designation" />
+      <Label layoutX="428.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="Address" />
+      <Label layoutX="843.0" layoutY="141.0" prefHeight="17.0" prefWidth="135.0" text="DOB" />
+      <TableView fx:id="tblEmployee" layoutX="31.0" layoutY="466.0" prefHeight="200.0" prefWidth="862.0">
+         <columns>
+            <TableColumn fx:id="colEmId" prefWidth="105.0" text="Id" />
+            <TableColumn fx:id="colEmName" prefWidth="107.0" text="Name" />
+            <TableColumn fx:id="colEmAddress" prefWidth="176.0" text="Address" />
+            <TableColumn fx:id="colEmDesi" prefWidth="157.0" text="Designation" />
+            <TableColumn fx:id="colEmDob" prefWidth="165.0" text="DOB" />
+            <TableColumn fx:id="colEmSalary" prefWidth="165.0" text="Salary" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnEmSearch" buttonType="RAISED" layoutX="696.0" layoutY="366.0" onAction="#EmSearchOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Search Employee" textFill="WHITE" />
+      <JFXButton fx:id="btnEmDel" buttonType="RAISED" layoutX="905.0" layoutY="366.0" onAction="#EmDelOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Delete Employee" textFill="WHITE" />
+      <JFXButton fx:id="btnEmUp" buttonType="RAISED" layoutX="902.0" layoutY="426.0" onAction="#EmUpOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Update Employee" textFill="WHITE" />
+      <JFXTextField fx:id="txtSalary" labelFloat="true" layoutX="39.0" layoutY="202.0" onKeyReleased="#EnterKeyRelease" promptText="60000.00" />
+      <Label layoutX="39.0" layoutY="250.0" prefHeight="17.0" prefWidth="135.0" text="Salary" />
+   </children>
+</AnchorPane>

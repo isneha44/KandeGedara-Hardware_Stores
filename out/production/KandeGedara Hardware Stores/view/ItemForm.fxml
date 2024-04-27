@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdminContext" prefHeight="895.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ItemFormController">
+   <children>
+      <ImageView fitHeight="877.0" fitWidth="1383.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Photos/Pic%2016.jpeg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtI_Code" labelFloat="true" layoutX="31.0" layoutY="106.0" onKeyReleased="#EnterKeyRelease" promptText="I00-000" />
+      <JFXTextField fx:id="txtI_Name" labelFloat="true" layoutX="234.0" layoutY="106.0" onKeyReleased="#EnterKeyRelease" promptText="Broom" />
+      <TextField fx:id="txtISearch" layoutX="46.0" layoutY="209.0" prefHeight="31.0" prefWidth="521.0" promptText="Search" />
+      <Label layoutX="61.0" layoutY="36.0" text="Item Form" textFill="#060a6b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="57.0" layoutY="56.0" prefHeight="13.0" prefWidth="994.0" />
+      <JFXTextField fx:id="txtI_Price" labelFloat="true" layoutX="443.0" layoutY="106.0" onKeyReleased="#EnterKeyRelease" promptText="65.00" />
+      <JFXButton fx:id="btnSaveItem" buttonType="RAISED" layoutX="876.0" layoutY="202.0" onAction="#SaveItemOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Save Item" textFill="WHITE" />
+      <JFXButton fx:id="btnNewItem" buttonType="RAISED" layoutX="910.0" layoutY="25.0" onAction="#NewItemOnAction" ripplerFill="WHITE" style="-fx-background-color: FF5F30;" text="+New" textFill="WHITE" />
+      <TableView fx:id="tblItem" layoutX="311.0" layoutY="369.0" prefHeight="332.0" prefWidth="506.0">
+         <columns>
+            <TableColumn fx:id="colItem_Code" prefWidth="126.0" text="Item_Code" />
+            <TableColumn fx:id="colCname" prefWidth="180.0" text="Item_Name" />
+            <TableColumn fx:id="colPrice" prefWidth="197.0" text="Price" />
+         </columns>
+      </TableView>
+      <Label layoutX="31.0" layoutY="148.0" text="Item_Code" />
+      <Label layoutX="234.0" layoutY="148.0" text="Item_Name" />
+      <Label layoutX="439.0" layoutY="148.0" text="Price" />
+      <JFXButton fx:id="btnSearchI" buttonType="RAISED" layoutX="612.0" layoutY="209.0" onAction="#SearchIOnAction" prefHeight="31.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Search Item" textFill="WHITE" />
+      <JFXButton fx:id="btnDel" buttonType="RAISED" layoutX="876.0" layoutY="256.0" onAction="#DelItemOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Delete Item" textFill="WHITE" />
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="876.0" layoutY="306.0" onAction="#UpdateItemOnAction" ripplerFill="WHITE" style="-fx-background-color: #3CC798;" text="Update Item" textFill="WHITE" />
+   </children>
+</AnchorPane>
